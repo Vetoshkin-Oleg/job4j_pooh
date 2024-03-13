@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class ConsumerClient {
     public static void main(String[] args) throws Exception {
-        try (var socket = new Socket("127.0.0.1", 9000);) {
+        try (var socket = new Socket("127.0.0.1", 9000)) {
             try (var out = new PrintWriter(socket.getOutputStream());
                  var input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
                 out.println("intro;queue;weather");

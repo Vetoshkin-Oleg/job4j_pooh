@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ProducerClient {
     public static void main(String[] args) throws Exception {
-        try (var socket = new Socket("127.0.0.1", 9000);) {
+        try (var socket = new Socket("127.0.0.1", 9000)) {
             var cli = new Scanner(System.in);
             try (var out = new PrintWriter(socket.getOutputStream());
                  var input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
