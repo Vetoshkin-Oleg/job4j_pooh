@@ -11,6 +11,7 @@ import static org.assertj.core.api.Assertions.*;
 class QueueSchemaTest {
 
     @Test
+    @Timeout(3)
     public void whenTwoReceivers() throws InterruptedException {
         var queue = new QueueSchema();
         var result = new CopyOnWriteArrayList<String>();

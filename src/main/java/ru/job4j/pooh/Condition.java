@@ -5,12 +5,12 @@ public class Condition {
 
     synchronized void on() {
         flag = true;
-        notify();
+        notifyAll();
     }
 
     synchronized void off() {
         flag = false;
-        notify();
+        notifyAll();
     }
 
     synchronized void await() throws InterruptedException {
